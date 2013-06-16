@@ -21,6 +21,9 @@
 		271A6A46176C370F00D01702 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271A6A27176C370E00D01702 /* Foundation.framework */; };
 		271A6A4E176C370F00D01702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 271A6A4C176C370F00D01702 /* InfoPlist.strings */; };
 		271A6A51176C370F00D01702 /* WeatherViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A6A50176C370F00D01702 /* WeatherViewTests.m */; };
+		271A6A5C176C374900D01702 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A6A5B176C374900D01702 /* WeatherViewController.m */; };
+		271A6A5F176C376500D01702 /* WeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271A6A5E176C376500D01702 /* WeatherView.m */; };
+		276B4291176D521700D7CD71 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276B4290176D521700D7CD71 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		271A6A4D176C370F00D01702 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		271A6A4F176C370F00D01702 /* WeatherViewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewTests.h; sourceTree = "<group>"; };
 		271A6A50176C370F00D01702 /* WeatherViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewTests.m; sourceTree = "<group>"; };
+		271A6A5A176C374900D01702 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		271A6A5B176C374900D01702 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		271A6A5D176C376500D01702 /* WeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherView.h; sourceTree = "<group>"; };
+		271A6A5E176C376500D01702 /* WeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherView.m; sourceTree = "<group>"; };
+		276B4290176D521700D7CD71 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276B4291176D521700D7CD71 /* CoreLocation.framework in Frameworks */,
 				271A6A26176C370E00D01702 /* UIKit.framework in Frameworks */,
 				271A6A28176C370E00D01702 /* Foundation.framework in Frameworks */,
 				271A6A2A176C370E00D01702 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +110,7 @@
 		271A6A24176C370E00D01702 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				276B4290176D521700D7CD71 /* CoreLocation.framework */,
 				271A6A25176C370E00D01702 /* UIKit.framework */,
 				271A6A27176C370E00D01702 /* Foundation.framework */,
 				271A6A29176C370E00D01702 /* CoreGraphics.framework */,
@@ -114,6 +124,10 @@
 			children = (
 				271A6A34176C370E00D01702 /* AppDelegate.h */,
 				271A6A35176C370E00D01702 /* AppDelegate.m */,
+				271A6A5D176C376500D01702 /* WeatherView.h */,
+				271A6A5E176C376500D01702 /* WeatherView.m */,
+				271A6A5A176C374900D01702 /* WeatherViewController.h */,
+				271A6A5B176C374900D01702 /* WeatherViewController.m */,
 				271A6A2C176C370E00D01702 /* Supporting Files */,
 			);
 			path = WeatherView;
@@ -263,6 +277,8 @@
 			files = (
 				271A6A32176C370E00D01702 /* main.m in Sources */,
 				271A6A36176C370E00D01702 /* AppDelegate.m in Sources */,
+				271A6A5C176C374900D01702 /* WeatherViewController.m in Sources */,
+				271A6A5F176C376500D01702 /* WeatherView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +345,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -353,7 +369,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -366,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeatherView/WeatherView-Prefix.pch";
 				INFOPLIST_FILE = "WeatherView/WeatherView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -377,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeatherView/WeatherView-Prefix.pch";
 				INFOPLIST_FILE = "WeatherView/WeatherView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +453,7 @@
 				271A6A56176C370F00D01702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		271A6A57176C370F00D01702 /* Build configuration list for PBXNativeTarget "WeatherViewTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +462,7 @@
 				271A6A59176C370F00D01702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
